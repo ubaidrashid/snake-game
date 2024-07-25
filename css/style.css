@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:slnt,wght@-10..0,100..900&family=New+Tegomin&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body-child {
+    height: 100vh;
+    width: 100%;
+    background: url(https://wallpapers.com/images/hd/snake-game-1680-x-1050-background-6syqer1fr6oahe0b.jpg) center center/cover;
+    background-size: 100vw 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board {
+    /* background: linear-gradient(rgb(7, 7, 7), rgb(215, 214, 195)); */
+    background-color: rgba(0, 0, 0, 0.351);
+    height: 90%;
+    width: 40%;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.head {
+    background: linear-gradient(red , yellow);
+    border:  2px solid purple;
+    transform: scale(1.5);
+    /* border-top-left-radius: 15px; */
+    /* border-top-right-radius: 15px; */
+    /* ma-bottom: 50px; */
+    border-radius: 9px;
+}
+
+.snake {
+    background:linear-gradient(white , lightblue);
+    border: .25vmin solid white;
+    border-radius: 12px;
+
+}
+
+.food {
+    background-color: yellow;
+
+}
+#scoreBox{
+    font-family: "New Tegomin", serif;
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    /* background-color: red; */
+    /* color: red; */
+    font-size:39px ;
+    font-weight: bold;
+}
+#highScoreBox{
+    font-family: "New Tegomin", serif;
+    position: absolute;
+    top: 80px;
+    right: 150px;
+    /* background-color: red; */
+    /* color: red; */
+    font-size:39px ;
+    font-weight: bold;
+
+}
+@media(min-width:280px) and (max-width:430px){
+    #board{
+        width: 90%;
+        height: 60%;
+        
+    }
+    #scoreBox{
+        font-family: "New Tegomin", serif;
+        position: absolute;
+        top: 9px;
+        /* right: 200px; */
+        left: 20px;
+        /* background-color: red; */
+        /* color: red; */
+        font-size:30px ;
+        font-weight: bold;
+    }
+    #highScoreBox{
+        font-family: "New Tegomin", serif;
+        position: absolute;
+        top: 80px;
+        /* right: 150px; */
+        left: 20px;
+        /* background-color: red; */
+        /* color: red; */
+        font-size:30px ;
+        font-weight: bold;
+    
+    }
+}
+@media(min-width:767px) and (max-width:1025px){
+
+    #board{
+        width: 90%;
+        height: 60%;
+    
+    }
+}
